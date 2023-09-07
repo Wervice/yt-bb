@@ -1,16 +1,10 @@
-// Copy and paste in developer tools console.
+// Copy and paste in developer tools console or to the code filed of the YouTube Enhancer Addon.
 function byeit() {
-    for (e in document.getElementsByTagName("ytd-enforcement-message-view-model")) {
-        if (e != 0) {
-            e.innerHTML = ""
-        }
-    }
-
-    for (e in document.getElementsByTagName("tp-yt-iron-overlay-backdrop")) {
-        if (e != 0) {
-            e.innerHTML = ""
-        }
-    }
+try {
+    document.getElementsByClassName("ytd-popup-container")[0].remove() }
+catch {
+ console.error("Its gone")
+}
     try {
         document.getElementsByClassName("video-stream html5-main-video")[0].play()
     }
